@@ -132,7 +132,8 @@ public class SecurityConfig {
 
         configuration.setAllowedOrigins(List.of(
                 "http://localhost:5174",
-                "http://localhost:3000"
+                "http://localhost:3000",
+                "http://robust-ronda-lumexio-58776f00.koyeb.app/"
         ));
 
         configuration.setAllowedMethods(List.of(
