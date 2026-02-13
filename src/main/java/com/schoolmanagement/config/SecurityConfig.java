@@ -135,7 +135,8 @@ public class SecurityConfig {
                 "http://localhost:5173",
                 "http://localhost:3000",
                 "http://robust-ronda-lumexio-58776f00.koyeb.app/",
-                "https://schoolinglumexio.netlify.app"
+                "https://robust-ronda-lumexio-58776f00.koyeb.app/",
+                "https://lumexioschooling.netlify.app"
         ));
 
         configuration.setAllowedMethods(List.of(
