@@ -23,6 +23,13 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private final JwtTokenProvider tokenProvider;
     private final UserDetailsService userDetailsService;
 
+
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        // ⭐ Allow CORS preflight to pass without JWT check
+        return "OPTIONS".equalsIgnoreCase(request.getMethod());
+    }
+
     @Override
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response,
