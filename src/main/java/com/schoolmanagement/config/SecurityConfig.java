@@ -1,4 +1,5 @@
 package com.schoolmanagement.config;
+import org.springframework.http.HttpMethod;
 
 import com.schoolmanagement.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
@@ -47,6 +48,7 @@ public class SecurityConfig {
 
                 // Authorization rules
                 .authorizeHttpRequests(auth -> auth
+                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         // PUBLIC
                         .requestMatchers(
                                 "/api/auth/**",
